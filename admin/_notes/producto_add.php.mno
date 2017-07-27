@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_consultacategorias" value="name:ID_categoria;datatype:int,name:Descripcion;datatype:string" />
+</info>

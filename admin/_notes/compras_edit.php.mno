@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Datoscompra" value="name:idCompra;datatype:int,name:ID_usuario;datatype:int,name:fchcompra;datatype:datetime,name:intTipoPago;datatype:int,name:dblTotal;datatype:real" />
+	<infoitem key="UD_ProductosCompra" value="name:intContador;datatype:int,name:ID_usuario;datatype:int,name:idProducto;datatype:int,name:intCantidad;datatype:int,name:intTransaccionEfectuada;datatype:int" />
+</info>

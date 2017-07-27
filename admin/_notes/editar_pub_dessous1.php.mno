@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_edit_pub1" value="name:id_pub1;datatype:int,name:imagen;datatype:string,name:imagen1;datatype:string,name:imagen2;datatype:string,name:imagen3;datatype:string,name:imagen4;datatype:string,name:imagen5;datatype:string,name:nombre;datatype:string" />
+	<infoitem key="UD_edit_pub" value="name:id_pub_dessous0;datatype:int,name:ID_producto;datatype:int,name:link;datatype:string,name:noticia;datatype:string" />
+</info>
