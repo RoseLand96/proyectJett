@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_Datosventa" value="name:ID_producto;datatype:int,name:Nbre_producto;datatype:string,name:SEO;datatype:string,name:Precio;datatype:real,name:Estado_producto;datatype:int,name:Categoria;datatype:int,name:strImagen;datatype:string,name:intStock;datatype:int,name:ID_usuario;datatype:int,name:fecha_producto;datatype:datetime,name:ID_categoria;datatype:int,name:Descripcion;datatype:string" />
+</info>
