@@ -1,0 +1,298 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #42413C;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+/* ~~ Selectores de elemento/etiqueta ~~ */
+ul, ol, dl { /* Debido a las diferencias existentes entre los navegadores, es recomendable no añadir relleno ni márgenes en las listas. Para lograr coherencia, puede especificar las cantidades deseadas aquí o en los elementos de lista (LI, DT, DD) que contienen. Recuerde que lo que haga aquí se aplicará en cascada en la lista .nav, a no ser que escriba un selector más específico. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* la eliminación del margen superior resuelve un problema que origina que los márgenes escapen de la etiqueta div contenedora. El margen inferior restante lo mantendrá separado de los elementos de que le sigan. */
+	padding-right: 15px;
+	padding-left: 15px; /* la adición de relleno a los lados del elemento dentro de las divs, en lugar de en las divs propiamente dichas, elimina todas las matemáticas de modelo de cuadro. Una div anidada con relleno lateral también puede usarse como método alternativo. */
+	font-size: 100%;
+}
+a img { /* este selector elimina el borde azul predeterminado que se muestra en algunos navegadores alrededor de una imagen cuando está rodeada por un vínculo */
+	border: none;
+}
+
+/* ~~ La aplicación de estilo a los vínculos del sitio debe permanecer en este orden (incluido el grupo de selectores que crea el efecto hover -paso por encima-). ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* a no ser que aplique estilos a los vínculos para que tengan un aspecto muy exclusivo, es recomendable proporcionar subrayados para facilitar una identificación visual rápida */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* este grupo de selectores proporcionará a un usuario que navegue mediante el teclado la misma experiencia de hover (paso por encima) que experimenta un usuario que emplea un ratón. */
+	text-decoration: none;
+}
+
+/* ~~ este contenedor de anchura fija rodea a las demás divs ~~ */
+.container {
+	width: auto;
+	background-color: #FFF;
+	margin: auto; /* el valor automático de los lados, unido a la anchura, centra el diseño */
+}
+
+/* ~~ no se asigna una anchura al encabezado. Se extenderá por toda la anchura del diseño. Contiene un marcador de posición de imagen que debe sustituirse por su propio logotipo vinculado ~~ */
+
+
+
+.subcontenedor {
+	background-color: #FFF;
+	padding:auto;
+	 margin: auto;
+	 width: auto ;
+}
+/*espace sidebar menu ----------------------------------------------------------------------------------------------------------*/
+.sidebarjett {
+	float: left;
+	width: 180px;
+	background-color: rgba(192,191,202,0.2);
+	padding-bottom: 10px;
+	outline: 0.5px solid #c0c0c0;
+}
+.sidebarjett h3{
+	text-align:center;
+	margin: 0;
+	padding: 10px;
+	background: rgba(192,191,202,0.5);
+	}
+.sidebarjett a {
+	display:block;
+	color:#000000;
+	text-decoration: none;
+	padding: 6px;
+	
+}
+.sidebarjett ul {
+	list-style: none;
+	padding:0;
+	margin: 0;
+	}
+
+.sidebarjett li {
+	outline: 0.5px solid #c0c0c0;
+	transition:border 0.3s;
+	transition-property: border;
+	transition-duration:0.3s;
+	}
+
+.sidebarjett li:hover {
+	background: rgba(192,191,202,0.7);
+	border-left: 10px solid #ffff00;
+	}
+/*--------------------------------------------------------------------------*/	
+.header {
+	background-color: #FCDD03;
+	width: 100%;
+	height: 60px;	
+
+}
+.headerinterior{
+	width: 1000px;
+	height: 180px;
+	margin: 0 auto;
+}
+.headerjett {
+	float: right;	
+}
+
+.headerjett a {
+	display:inline-block;
+	text-decoration:none;
+	padding:0px 10px;
+	font-size:12px;
+	font-weight:bold;
+	line-height:normal;
+}
+
+
+.headerjett a:hover{
+	background: rgba(192,191,202,0.7);
+	border-left: 10px solid #ffff00;
+		
+}
+.headerjett ul{
+	float:right;
+	line-height:100px;
+	
+	
+	}
+
+
+/*-----------------------------------------------------------------------------------------------------------*/
+.content {
+
+	padding: 0px;
+	margin: 0px;
+	width: 800px;
+	float: left;
+}
+
+/* ~~ Este selector agrupado da espacio a las listas del área de .content ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* este relleno reproduce en espejo el relleno derecho de la regla de encabezados y de párrafo incluida más arriba. El relleno se ha colocado en la parte inferior para que el espacio existente entre otros elementos de la lista y a la izquierda cree la sangría. Estos pueden ajustarse como se desee. */
+}
+
+/* ~~ Los estilos de lista de navegación (pueden eliminarse si opta por usar un menú desplegable predefinido como el de Spry) ~~ */
+ul.nav {
+	list-style: none; /* esto elimina el marcador de lista */
+	border-top: 1px solid #666; /* esto crea el borde superior de los vínculos (los demás se sitúan usando un borde inferior en el LI) */
+	margin-bottom: 15px; /* esto crea el espacio entre la navegación en el contenido situado debajo */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* esto crea la separación de los botones */
+}
+ul.nav a, ul.nav a:visited { /* al agrupar estos selectores, se asegurará de que los vínculos mantengan el aspecto de botón incluso después de haber sido visitados */
+	padding: 5px 5px 5px 15px;
+	display: block; /* esto asigna propiedades de bloque al vínculo, lo que provoca que llene todo el LI que lo contiene. Esto provoca que toda el área reaccione a un clic de ratón. */
+	width: 160px;  /*esta anchura hace que se pueda hacer clic en todo el botón para IE6. Puede eliminarse si no es necesario proporcionar compatibilidad con IE6. Calcule la anchura adecuada restando el relleno de este vínculo de la anchura del contenedor de barra lateral. */
+	text-decoration: none;
+	background-color: #C6D580;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* esto cambia el color de fondo y del texto tanto para usuarios que naveguen con ratón como para los que lo hagan con teclado */
+	background-color: #ADB96E;
+	color: #FFF;
+}
+
+/* ~~ El pie de página ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #CCC49F;
+	position: relative;/* esto da a IE6 hasLayout para borrar correctamente */
+	clear: both; /* esta propiedad de borrado fuerza a .container a conocer dónde terminan las columnas y a contenerlas */
+}
+
+/* ~~ clases float/clear varias ~~ 
+		
+/*css ingresar y registrar*/	
+/*form{
+	margin: auto;
+	width: 960px;
+	
+	background:  #F3F3F3;
+	padding: 30px;
+	border: 1px solid rgba(0,0,0,0.2)
+	} 
+	*/
+
+
+form{
+    margin: 0 auto;
+    align-content: center;
+    border-radius: 10px;
+    border: 1px solid #666666;
+    width: 1200px;
+    background:  #F3F3F3;
+}
+
+
+
+input {
+    font-size: 14px;
+}
+
+input[type="text"] {
+    border-radius: 5px;
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #777;
+    max-width: 100%;
+    outline: none;
+    padding: 7px 8px;
+}
+
+input[type="submit"] {
+    border-radius: 5px;
+    margin: 10px 0;
+    background: #0088B2;
+    color: #fff;
+    padding: 8px 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+textarea{
+    border-radius: 5px;
+    margin: 10px 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #777;
+    max-width: 100%;
+    outline: none;
+    padding: 7px 8px;
+}
+
+input[type="submit"]:hover {
+    background: #444;
+}
+	
+h2{
+		text-align: center;
+		margin-bottom: 20px;
+		color: rgba(0,0,0,0.5);
+		font-size: 30px;
+
+
+		}
+
+		h4{
+		text-align: center;
+		line-height: 0.01%;
+
+
+		}
+
+
+
+.textfieldRequiredMsg{
+	font-size: 10px;
+	}
+
+td{
+	float:none;
+	
+		}
+		
+		
+.select {
+  position: relative;
+  border: 1px solid #ccc;
+  width: 120px;
+  overflow: hidden;
+  background-color: #fff;
+}
+  .select:before {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 5px 0 5px;
+    border-color: #000000 transparent transparent transparent;
+    z-index: 5;
+    pointer-events: none;
+  }
+  .select select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    appearance: none;
+  }
